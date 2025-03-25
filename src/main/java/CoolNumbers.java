@@ -22,7 +22,10 @@ public class CoolNumbers {
 
             int indexRandomLetters3 = (int) (Math.random() * 12);
             String randomLetters3 = arrayLetters[indexRandomLetters3];
-            
+
+            int randomRegion = 1 + (int) (Math.random() * 199);
+
+            //String randomAutoNumber = ;
         }
 
 
