@@ -25,7 +25,9 @@ public class CoolNumbers {
 
             int randomRegion = 1 + (int) (Math.random() * 199);
 
-            //String randomAutoNumber = ;
+            String randomAutoNumber = randomLetters + randomNumber + randomNumber + randomNumber
+                    + randomLetters2 + randomLetters3 + randomRegion;
+            listCoolNumbers.add(randomAutoNumber);
         }
 
 
