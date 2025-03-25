@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class CoolNumbers {
     public static void main(String[] args) {
-
+        System.out.println(generateCoolNumbers());
     }
 
     public static ArrayList<String> generateCoolNumbers() {
