@@ -26,7 +26,7 @@ public class CoolNumbers {
     public static ArrayList<String> generateCoolNumbers() {
         ArrayList<String> listCoolNumbers = new ArrayList<>();
 
-        for (int i = 0; i < 2_000_000; i++) {
+        for (int i = 0; i < 2_00_00; i++) {
             String letters = "А, В, Е, К, М, Н, О, Р, С, Т, У, Х";
             String[] arrayLetters = letters.split(", ");
 
@@ -46,6 +46,10 @@ public class CoolNumbers {
             String randomAutoNumber = randomLetters + randomNumber + randomNumber + randomNumber
                     + randomLetters2 + randomLetters3 + randomRegion;
             listCoolNumbers.add(randomAutoNumber);
+
+            if(!listCoolNumbers.contains(randomAutoNumber)){
+                listCoolNumbers.add(randomAutoNumber);
+            }
         }
 
 
