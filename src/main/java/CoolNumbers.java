@@ -9,6 +9,19 @@ public class CoolNumbers {
         }
     }
 
+    public static void getIndexSearchNameEnumerate(String searchAutoNumber, ArrayList<String> listCoolNumbers){
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < listCoolNumbers.size(); i++) {
+            String currentAutoNumber = listCoolNumbers.get(i);
+            if (currentAutoNumber.equals(searchAutoNumber)) {
+                long end = System.currentTimeMillis();
+                long difference = end - start;
+                System.out.println("За " + difference + " мс был найден искомый номер." +
+                        "\nОн находится на позиции " + i);
+            }
+        }
+    }
+
     public static ArrayList<String> generateCoolNumbers() {
         ArrayList<String> listCoolNumbers = new ArrayList<>();
 
