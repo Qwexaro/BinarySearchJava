@@ -18,10 +18,13 @@ public class Main {
         int middle = (start + end) / 2;
 
         while (searchName.compareTo(listNames.get(middle))!=0){
-            
+            if(searchName.compareTo(listNames.get(middle))< 0){
+                end = middle - 1;
+            } else if (searchName.compareTo(listNames.get(middle)) > 0) {
+                start = start + 1;
+            }
         }
-
-
+        
         return middle;
     }
 }
