@@ -2,7 +2,11 @@ import java.util.ArrayList;
 
 public class CoolNumbers {
     public static void main(String[] args) {
-        System.out.println(generateCoolNumbers());
+//        System.out.println(generateCoolNumbers());
+        ArrayList<String> listCoolNumbers = generateCoolNumbers();
+        for(String currentAutoNumber : listCoolNumbers){
+            System.out.println(currentAutoNumber);
+        }
     }
 
     public static ArrayList<String> generateCoolNumbers() {
