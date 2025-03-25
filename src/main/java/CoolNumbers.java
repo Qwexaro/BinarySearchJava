@@ -16,6 +16,13 @@ public class CoolNumbers {
             String randomLetters = arrayLetters[indexRandomLetters];
 
             int randomNumber = (int) (Math.random() * 10);
+
+            int indexRandomLetters2 = (int) (Math.random() * 12);
+            String randomLetters2 = arrayLetters[indexRandomLetters2];
+
+            int indexRandomLetters3 = (int) (Math.random() * 12);
+            String randomLetters3 = arrayLetters[indexRandomLetters3];
+            
         }
 
 
