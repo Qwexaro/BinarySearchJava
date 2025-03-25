@@ -4,12 +4,13 @@ public class CoolNumbers {
     public static void main(String[] args) {
 //        System.out.println(generateCoolNumbers());
         ArrayList<String> listCoolNumbers = generateCoolNumbers();
-        for(String currentAutoNumber : listCoolNumbers){
+        for (String currentAutoNumber : listCoolNumbers) {
             System.out.println(currentAutoNumber);
         }
+        getIndexSearchNameEnumerate(listCoolNumbers.get(listCoolNumbers.size() - 1), listCoolNumbers);
     }
 
-    public static void getIndexSearchNameEnumerate(String searchAutoNumber, ArrayList<String> listCoolNumbers){
+    public static void getIndexSearchNameEnumerate(String searchAutoNumber, ArrayList<String> listCoolNumbers) {
         long start = System.currentTimeMillis();
         for (int i = 0; i < listCoolNumbers.size(); i++) {
             String currentAutoNumber = listCoolNumbers.get(i);
