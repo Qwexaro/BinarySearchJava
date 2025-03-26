@@ -8,6 +8,7 @@ public class CoolNumbers {
             System.out.println(currentAutoNumber);
         }
         getIndexSearchNameEnumerate(listCoolNumbers.get(listCoolNumbers.size() - 1), listCoolNumbers);
+        //getIndexSearchNameBinary(listCoolNumbers.get(listCoolNumbers.size() - 1), listCoolNumbers);
     }
 
     public static void getIndexSearchNameEnumerate(String searchAutoNumber, ArrayList<String> listCoolNumbers) {
@@ -25,6 +26,8 @@ public class CoolNumbers {
 
 
     public static void getIndexSearchNameBinary(String searchAutoNumber, ArrayList<String> listCoolNumbers) {
+        long s = System.currentTimeMillis();
+
         int start = 0;
         int end = listCoolNumbers.size() - 1;
         int middle = (start + end) / 2;
@@ -37,13 +40,19 @@ public class CoolNumbers {
             }
             middle = (start + end) / 2;
         }
+
+        long e = System.currentTimeMillis();
+        long difference = e - s;
+        System.out.println("С помощью поиска был найден \"" + listCoolNumbers.get(middle) + "\"" +
+                "за " + difference + " мс, \n" +
+                "к-й имеет индекс " + middle);
     }
 
 
     public static ArrayList<String> generateCoolNumbers() {
         ArrayList<String> listCoolNumbers = new ArrayList<>();
 
-        for (int i = 0; i < 2_00_00; i++) {
+        for (int i = 0; i < 50_000; i++) {
             String letters = "А, В, Е, К, М, Н, О, Р, С, Т, У, Х";
             String[] arrayLetters = letters.split(", ");
 
@@ -66,6 +75,7 @@ public class CoolNumbers {
 
             if (!listCoolNumbers.contains(randomAutoNumber)) {
                 listCoolNumbers.add(randomAutoNumber);
+
             }
         }
 
