@@ -24,13 +24,15 @@ public class CoolNumbers {
     }
 
 
-    public static void getIndexSearchNameBinary(String searchAutoNumber, ArrayList<String> listCoolNumbers){
+    public static void getIndexSearchNameBinary(String searchAutoNumber, ArrayList<String> listCoolNumbers) {
         int start = 0;
         int end = listCoolNumbers.size() - 1;
         int middle = (start + end) / 2;
 
-        while (searchAutoNumber.compareTo(listCoolNumbers.get(middle)) != 0){
-            
+        while (searchAutoNumber.compareTo(listCoolNumbers.get(middle)) != 0) {
+            if(searchAutoNumber.compareTo(listCoolNumbers.get(middle)) < 0){
+                end = middle - 1; // слева от середины
+            }
         }
     }
 
@@ -59,7 +61,7 @@ public class CoolNumbers {
                     + randomLetters2 + randomLetters3 + randomRegion;
             listCoolNumbers.add(randomAutoNumber);
 
-            if(!listCoolNumbers.contains(randomAutoNumber)){
+            if (!listCoolNumbers.contains(randomAutoNumber)) {
                 listCoolNumbers.add(randomAutoNumber);
             }
         }
