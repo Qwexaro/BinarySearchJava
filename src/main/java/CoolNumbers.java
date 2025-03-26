@@ -78,9 +78,14 @@ public class CoolNumbers {
 
             }
         }
+
         for (int i = 0; i < listCoolNumbers.size() - 1; i++) {
             for (int j = 1; j < listCoolNumbers.size(); j++) {
-
+                if (listCoolNumbers.get(0).compareTo(listCoolNumbers.get(j)) > 0) {
+                    String tmp = listCoolNumbers.get(j);
+                    listCoolNumbers.set(i, listCoolNumbers.get(j));
+                    listCoolNumbers.set(j, tmp);
+                }
             }
         }
 
