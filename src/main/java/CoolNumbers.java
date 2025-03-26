@@ -32,7 +32,10 @@ public class CoolNumbers {
         while (searchAutoNumber.compareTo(listCoolNumbers.get(middle)) != 0) {
             if(searchAutoNumber.compareTo(listCoolNumbers.get(middle)) < 0){
                 end = middle - 1; // слева от середины
+            } else if (searchAutoNumber.compareTo(listCoolNumbers.get(middle)) > 0) {
+                start = middle + 1;
             }
+            middle = (start + end) / 2;
         }
     }
 
