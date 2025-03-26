@@ -8,7 +8,7 @@ public class CoolNumbers {
             System.out.println(currentAutoNumber);
         }
         getIndexSearchNameEnumerate(listCoolNumbers.get(listCoolNumbers.size() - 1), listCoolNumbers);
-        //getIndexSearchNameBinary(listCoolNumbers.get(listCoolNumbers.size() - 1), listCoolNumbers);
+        getIndexSearchNameBinary(listCoolNumbers.get(listCoolNumbers.size() - 1), listCoolNumbers);
     }
 
     public static void getIndexSearchNameEnumerate(String searchAutoNumber, ArrayList<String> listCoolNumbers) {
@@ -33,7 +33,7 @@ public class CoolNumbers {
         int middle = (start + end) / 2;
 
         while (searchAutoNumber.compareTo(listCoolNumbers.get(middle)) != 0) {
-            if(searchAutoNumber.compareTo(listCoolNumbers.get(middle)) < 0){
+            if (searchAutoNumber.compareTo(listCoolNumbers.get(middle)) < 0) {
                 end = middle - 1; // слева от середины
             } else if (searchAutoNumber.compareTo(listCoolNumbers.get(middle)) > 0) {
                 start = middle + 1;
@@ -78,7 +78,11 @@ public class CoolNumbers {
 
             }
         }
+        for (int i = 0; i < listCoolNumbers.size() - 1; i++) {
+            for (int j = 1; j < listCoolNumbers.size(); j++) {
 
+            }
+        }
 
         return listCoolNumbers;
     }
