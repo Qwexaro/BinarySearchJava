@@ -25,7 +25,13 @@ public class CoolNumbers {
 
 
     public static void getIndexSearchNameBinary(String searchAutoNumber, ArrayList<String> listCoolNumbers){
-        
+        int start = 0;
+        int end = listCoolNumbers.size() - 1;
+        int middle = (start + end) / 2;
+
+        while (searchAutoNumber.compareTo(listCoolNumbers.get(middle)) != 0){
+            
+        }
     }
 
 
