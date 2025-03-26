@@ -23,6 +23,12 @@ public class CoolNumbers {
         }
     }
 
+
+    public static void getIndexSearchNameBinary(String searchAutoNumber, ArrayList<String> listCoolNumbers){
+        
+    }
+
+
     public static ArrayList<String> generateCoolNumbers() {
         ArrayList<String> listCoolNumbers = new ArrayList<>();
 
